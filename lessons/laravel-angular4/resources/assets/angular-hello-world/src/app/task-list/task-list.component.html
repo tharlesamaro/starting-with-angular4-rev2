@@ -1,0 +1,21 @@
+<ul>
+  <li *ngFor="let item of tasks" [myTask]="item">
+  	{{
+  		(item.name | lowercase) + ' - ' + 
+  		(item.value | formatCurrency) + ' - ' +
+  		(item.date_launch | formatDate:'en-US')
+  	}}
+  </li>
+</ul>
+
+
+<!--<p myTask></p>-->
+<!--<li [id]=" 'list-' + item.name"
+  	  [style.color]="item.value > 5 ? 'green':'red'"
+  		*ngFor="let item of tasks" [innerHtml]="item.name + ' - ' + item.value">
+  </li>
+  <li [id]=" 'list-' + item.name"
+  		class="teste"
+  	  [ngClass]="{'item-green':item.value>5,'item-red':item.value<5}"
+  		*ngFor="let item of tasks" [innerHtml]="item.name + ' - ' + item.value">
+  </li>-->
